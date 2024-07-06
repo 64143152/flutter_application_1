@@ -9,16 +9,27 @@ class HomeScreen extends StatelessWidget {
         child: Text('MENU'),
       ),
       appBar: AppBar(
-        title: Text('Home'),
+        title: Text('หน้าหลัก'),
       ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => SecondScreen()),
-            );
-          },
-          child: Text('Go second screen!'),
+      body: Container(
+        child: Row(
+          children: [
+            Container(
+              color: Colors.red,
+              height: 120,
+              width: 120,
+            ),
+            Container(
+              color: Colors.green,
+              height: 120,
+              width: 240,
+            ),
+            Container(
+              color: Colors.blue,
+              height: 240,
+              width: 120,
+            ),
+          ],
         ),
       ),
     );
